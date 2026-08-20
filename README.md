@@ -10,8 +10,8 @@
 
 | Name                              | Registration Number | Primary Role & Contributions                                                      |
 | :-------------------------------- | :------------------ | :-------------------------------------------------------------------------------- |
-| **KADIRISANI SAINATH GOUD** | `RA2411053010033` | Team Lead, Full-Stack Architecture, RAG Pipeline & Streamlit UI                   |
-| **KAVIN M**                 | `RA2411004010025` | AI/LLM Integration, Ollama Local Model Pipeline & Prompt Grounding                |
+| **KADIRISANI SAINATH GOUD** | `RA2411053010033` | Full-Stack Architecture, RAG Pipeline & Streamlit UI                   |
+| **KAVIN M**                 | `RA2411004010025` | Team Lead,AI/LLM Integration, Ollama Local Model Pipeline & Prompt Grounding                |
 | **ANTO CHINNADURAI N A**    | `RA2411004010029` | Document Parser Specialist, Regex Clause Extraction & EasyOCR Integration         |
 | **DEEBA KUMAR M**           | `RA2411004010039` | Risk Evaluation Logic, Indic Multi-Language Localization (Tamil/Telugu/Malayalam) |
 | **KANISHA R**               | `RA2411004010020` | QA Lead, ReportLab PDF Export Formatting & Demo Dataset Curation                  |
