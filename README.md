@@ -1,34 +1,34 @@
-The DocuSense AI is a simple & honest policy companion.
+# 📄 DocuSense AI — Simple & Honest Policy Companion
 
-> Document Intelligence System with AI that is privacy-focused and helps legal and policy documents become more readable.
+> **A privacy-focused Document Intelligence System that uses AI to make complex legal and policy documents easier to read, understand, and analyze.**
 
-The Hack & Fest AI Innovation Hackathon takes place at SRM Institute of Science and Technology.Hack & Fest AI Innovation Hackathon is held at SRM Institute of Science and Technology.
-Team 2 | Track 1: Document Intelligence Systems | Problem Statement 1.2
+**Hack & Fest AI Innovation Hackathon**
+**SRM Institute of Science and Technology (SRMIST)**
+**Team 2 | Track 1: Document Intelligence Systems | Problem Statement 1.2**
 
 ---
 
 ## 🚀 About the Project
 
-It not only allows users to understand complex documents like land sale agreement, lease agreement, contracts, and Terms of Service, but also helps them access these files.
+**DocuSense AI** is an AI-powered document intelligence system designed to help users understand complex documents such as **land sale agreements, lease agreements, contracts, and Terms of Service**.
 
-Users can upload a PDF, image or text, and the system will read it, identify important clauses, explain them in a simple way, answer questions based on the document, and mark potentially risky or suspicious terms.
+Users can upload a **PDF, image, or raw text**. The system extracts the content, identifies important clauses, explains complex terms in simple language, answers questions based on the uploaded document, and highlights potentially risky or suspicious clauses.
 
-The system also provides a “Policy Safety Score” (0-100) that will be explainable in order to assist the user in determining where he or she should focus attention.
+It also generates an **explainable Policy Safety Score (0–100)** to help users identify areas that may require additional attention.
 
 ---
 
 ## ✨ Key Features
 
-Support for multi-format Input: PDF, PNG, JPG/JPEG and raw text
-Smart Clause Extraction: Highlights key sections and legal clauses
-🇪 **Explanation in the Target Language** — Generates explanations in the target language from complex terms.
-Q&A with document context provided in a RAG model.
-⚖️ Risk Analysis — Identifies clauses that are unusual, risky and noteworthy
-Safety Score — Offers a 0-100 risk-based score, overall verdict
-Readiness for legal action against suspicious or fraudulent content (potentially)
-Please consult the user's guide for instructions on how to use the text.Please refer to user's guide for instructions on how to use the text (English, Tamil, Telugu, Malayalam, Hindi, Spanish and French).
-📥 Audit Reports: Export results in Markdown or PDF format
-Core AI processing is done locally using Ollama — Privacy First
+* 📄 **Multi-Format Input** — Supports PDF, PNG, JPG/JPEG, and raw text.
+* 🔍 **Smart Clause Extraction** — Identifies important sections and legal clauses.
+* 🌐 **Multilingual Explanation** — Explains complex terms in English, Tamil, Telugu, Malayalam, Hindi, Spanish, and French.
+* 💬 **RAG-Based Q&A** — Answers questions using the uploaded document as context.
+* ⚖️ **Risk Analysis** — Identifies unusual, risky, or noteworthy clauses.
+* 📊 **Policy Safety Score** — Provides an explainable risk score from 0–100 with an overall verdict.
+* 🚨 **Document Forensics** — Highlights potentially suspicious or fraudulent content for further review.
+* 📥 **Audit Reports** — Exports analysis in Markdown and PDF formats.
+* 🔐 **Privacy First** — Core AI processing is performed locally using Ollama.
 
 ---
 
@@ -47,7 +47,7 @@ Embedding Generation
  ↓
 FAISS Vector Store
  ↓
-Ollama + llama3.2
+Ollama + Llama 3.2
  ↓
 RAG Q&A + Risk Analysis
  ↓
@@ -58,34 +58,34 @@ Streamlit Dashboard
 PDF / Markdown Report
 ```
 
-### Main Technologies
+### 🛠️ Main Technologies
 
-The tools used for this project are Python, Streamlit, Ollama, Llama 3.2, EasyOCR, FAISS, pdfplumber, pypdf, and ReportLab.
+**Python • Streamlit • Ollama • Llama 3.2 • Nomic Embed Text • EasyOCR • FAISS • pdfplumber • pypdf • ReportLab**
 
 ---
 
 ## ⚡ Quick Start
 
-### 1. Install dependencies
+### 1. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Download local AI models
+### 2. Download Local AI Models
 
 ```bash
 ollama pull llama3.2
 ollama pull nomic-embed-text
 ```
 
-### 3. Run the application
+### 3. Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-Open:
+Open the application in your browser:
 
 ```text
 http://localhost:8501
@@ -95,28 +95,39 @@ http://localhost:8501
 
 ## 🔐 Privacy & Responsible AI
 
-DocuSense AI aims to be built as a **local-first app**. Instead of using external AI APIs, documents are processed using local OCR, embeddings, FAISS and Ollama models.
+DocuSense AI follows a **local-first approach**. Instead of depending on external AI APIs, documents are processed using local OCR, embeddings, FAISS, and Ollama-based models.
 
-The safety score produced and forensic results are provided as AI-assisted indicators, not legal certification or legal advice.
+The **Policy Safety Score** and forensic analysis are AI-assisted indicators intended to help users identify areas that may require attention. They **do not constitute legal certification or professional legal advice**.
 
 ---
 
 ## 👥 Team 2
 
-| Member                      | Contribution                                |
-| --------------------------- | ------------------------------------------- |
-Full-Stack Architecture, RAG & Streamlit
-| **KAVIN M**                 | Team Lead, AI/LLM & Ollama Pipeline         |
-| **ANTO CHINNADURAI N A**    | Document Parser, Regex & EasyOCR            |
-DEEBA KUMAR M | Risk Evaluation & Multilingual Localization |
-| **KANISHA R**               | QA, PDF Export & Demo Dataset               |
+| Member                      | Registration Number | Contribution                                |
+| --------------------------- | ------------------- | ------------------------------------------- |
+| **KADIRISANI SAINATH GOUD** | `RA2411053010033`   | Full-Stack Architecture, RAG & Streamlit    |
+| **KAVIN M**                 | `RA2411004010025`   | Team Lead, AI/LLM & Ollama Pipeline         |
+| **ANTO CHINNADURAI N A**    | `RA2411004010029`   | Document Parser, Regex & EasyOCR            |
+| **DEEBA KUMAR M**           | `RA2411004010039`   | Risk Evaluation & Multilingual Localization |
+| **KANISHA R**               | `RA2411004010020`   | QA, PDF Export & Demo Dataset               |
 
 ---
 
 ## 🎯 Vision
 
-> Upload, Understand, Ask, Analyze, Identify Risks, Make an Informed Decision
+> **Upload → Understand → Ask → Analyze → Identify Risks → Make an Informed Decision**
 
-DocuSense AI is designed to simplify, clarify, and make important documents easily accessible and understandable for all.
+DocuSense AI aims to make important documents **simpler, clearer, more accessible, and easier to understand for everyone**.
 
-SRMIST 🏆 is a Built for Hack & Fest AI Innovation Hackathon.
+---
+
+## 🏆 Hackathon
+
+**Built for the Hack & Fest AI Innovation Hackathon**
+**SRM Institute of Science and Technology (SRMIST)**
+
+### Team 2 — Track 1
+
+**Document Intelligence Systems | Problem Statement 1.2**
+
+---
