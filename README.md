@@ -1,12 +1,4 @@
-Using DocuSense AI, it's easy and straightforward to build policies.
-
-> AI based document intelligence system for legal and policy documents that enables to convert complex documents to readable, understandable and analysable content, while keeping privacy protected.
-
-Hack & Fest AI Innovation Hackathon
-SRM Institute of Science and Technology (SRMIST)
-Team 2 | Track 1: Document Intelligence Systems | Problem Statement 1.2
-
----
+Docusense AI
 
 ## About the Project
 
@@ -136,5 +128,3 @@ DocuSense AI is created to streamline vital paperwork, make them easier to read,
 Created during Hack and Fest AI Innovation Hackathon
 SRM Institute of Science and Technology
 
-Document Intelligence Systems is Track 1 of Team 2.Document Intelligence Systems is Track 1 of Team 2.
-**Problem Statement 1.2**
