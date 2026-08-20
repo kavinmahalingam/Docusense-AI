@@ -1,120 +1,122 @@
-# DocuSense AI — Simple & Honest Policy Companion
+The DocuSense AI is a simple & honest policy companion.
 
-**Hack & Fest AI Innovation Hackathon — SRM Institute of Science and Technology**
-*Organized by Ansnicore Solutions (Day 4)*
-**Team 2 — Track 1: Document Intelligence Systems (Problem Statement 1.2)**
+> Document Intelligence System with AI that is privacy-focused and helps legal and policy documents become more readable.
 
----
-
-## 👥 Team 2 Roster & Identification
-
-| Name                              | Registration Number | Primary Role & Contributions                                                      |
-| :-------------------------------- | :------------------ | :-------------------------------------------------------------------------------- |
-| **KADIRISANI SAINATH GOUD** | `RA2411053010033` | Full-Stack Architecture, RAG Pipeline & Streamlit UI                   |
-| **KAVIN M**                 | `RA2411004010025` | Team Lead,AI/LLM Integration, Ollama Local Model Pipeline & Prompt Grounding                |
-| **ANTO CHINNADURAI N A**    | `RA2411004010029` | Document Parser Specialist, Regex Clause Extraction & EasyOCR Integration         |
-| **DEEBA KUMAR M**           | `RA2411004010039` | Risk Evaluation Logic, Indic Multi-Language Localization (Tamil/Telugu/Malayalam) |
-| **KANISHA R**               | `RA2411004010020` | QA Lead, ReportLab PDF Export Formatting & Demo Dataset Curation                  |
+The Hack & Fest AI Innovation Hackathon takes place at SRM Institute of Science and Technology.Hack & Fest AI Innovation Hackathon is held at SRM Institute of Science and Technology.
+Team 2 | Track 1: Document Intelligence Systems | Problem Statement 1.2
 
 ---
 
-## 📌 Project Overview
+## 🚀 About the Project
 
-**DocuSense AI** is a 100% local, privacy-first legal document intelligence platform that translates complex legal agreements, Land Sale Deeds, Lease Policies, Terms of Service (ToS), and Contracts into plain language.
+It not only allows users to understand complex documents like land sale agreement, lease agreement, contracts, and Terms of Service, but also helps them access these files.
 
-It calculates an explainable **Policy Safety Score (0–100%)**, issues a **Safety Verdict** (`SAFE TO SIGN`, `PROCEED WITH CAUTION`, or `UNSAFE TO SIGN AS-IS`), and performs **Document Legality Forensics** to detect fraudulent or suspicious document text.
+Users can upload a PDF, image or text, and the system will read it, identify important clauses, explain them in a simple way, answer questions based on the document, and mark potentially risky or suspicious terms.
 
-> ⚠️ **100% Offline Hard Constraint Compliance**: Operates completely locally using Ollama (`llama3.2:latest` + `nomic-embed-text:latest`). Zero external API calls, zero cloud dependencies, zero data leakage.
-
----
-
-## ✨ Core Features Matrix
-
-| Feature                                         | Description                                                                                                           | Technical Implementation                                             |
-| :---------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------- |
-| 📤**Multi-Modal Document Ingestion**      | Supports PDF files, Image documents (PNG/JPG/JPEG), and direct Raw Text pasting                                       | `pdfplumber`, `pypdf`, `EasyOCR` (Pure Python OCR), `Pillow` |
-| 🌐**Indic Multi-Language Translation**    | Instant plain-language explanations and Q&A in**English, Telugu, Tamil, Malayalam, Hindi, Spanish, and French** | Prompt localization via`llama3.2:latest`                           |
-| 📜**Smart Clause Chunking**               | Section-aware regex chunking for land deeds, survey boundaries, and legal articles                                    | Custom rule-based clause parser (`pdf_utils.py`)                   |
-| ⚖️**Legality & Authenticity Forensics** | Automatically classifies documents as`LEGITIMATE` or `SUSPICIOUS / POTENTIALLY FRAUDULENT`                        | Forensic LLM analysis & indicator scanner                            |
-| 💬**Full-Context Grounded Q&A**           | Answers user queries strictly based on uploaded text; explicitly rejects external hallucinations                      | Full-clause context feeding & strict system prompt grounding         |
-| 📊**Explainable Safety Score (0-100%)**   | Generates an audit score based on critical red flags, unilateral terms, and hidden fees                               | Weighted scoring matrix (`llm_utils.py`)                           |
-| 📥**Multi-Format Audit Export**           | One-click downloadable audit reports in`.md` and `.pdf` formats with Indic script support                         | `ReportLab` with Windows `Segoe UI` font integration             |
+The system also provides a “Policy Safety Score” (0-100) that will be explainable in order to assist the user in determining where he or she should focus attention.
 
 ---
 
-## 🏗️ System Architecture & Data Flow
+## ✨ Key Features
 
-```mermaid
-flowchart TD
-    A[User Input: PDF / Image / Text] --> B[Multi-Format Ingestion Engine]
-    B -->|PDF| C[pdfplumber Text Extractor]
-    B -->|Image| D[EasyOCR Vision Pipeline]
-    B -->|Text| E[Raw Text Normalizer]
-  
-    C --> F[Regex Section & Clause Parser]
-    D --> F
-    E --> F
-  
-    F --> G[Local Embedding Engine: nomic-embed-text]
-    G --> H[(In-Memory FAISS Vector Store)]
-  
-    F --> I[Local LLM Engine: llama3.2]
-    I --> J[Plain-Language Simplifier]
-    I --> K[Hybrid Risk Scanner & Safety Verdict]
-    I --> L[Document Legality Forensics]
-  
-    H --> M[Grounded RAG Assistant]
-    I --> M
-  
-    J --> N[Streamlit Interactive Enterprise Dashboard]
-    K --> N
-    L --> N
-    M --> N
-  
-    N --> O[Export Audit Report: Markdown & ReportLab PDF]
+Support for multi-format Input: PDF, PNG, JPG/JPEG and raw text
+Smart Clause Extraction: Highlights key sections and legal clauses
+🇪 **Explanation in the Target Language** — Generates explanations in the target language from complex terms.
+Q&A with document context provided in a RAG model.
+⚖️ Risk Analysis — Identifies clauses that are unusual, risky and noteworthy
+Safety Score — Offers a 0-100 risk-based score, overall verdict
+Readiness for legal action against suspicious or fraudulent content (potentially)
+Please consult the user's guide for instructions on how to use the text.Please refer to user's guide for instructions on how to use the text (English, Tamil, Telugu, Malayalam, Hindi, Spanish and French).
+📥 Audit Reports: Export results in Markdown or PDF format
+Core AI processing is done locally using Ollama — Privacy First
+
+---
+
+## 🏗️ Technology Stack
+
+```text
+User
+ ↓
+PDF / Image / Text
+ ↓
+Text Extraction + OCR
+ ↓
+Clause Extraction
+ ↓
+Embedding Generation
+ ↓
+FAISS Vector Store
+ ↓
+Ollama + llama3.2
+ ↓
+RAG Q&A + Risk Analysis
+ ↓
+Safety Score & Verdict
+ ↓
+Streamlit Dashboard
+ ↓
+PDF / Markdown Report
 ```
 
+### Main Technologies
+
+The tools used for this project are Python, Streamlit, Ollama, Llama 3.2, EasyOCR, FAISS, pdfplumber, pypdf, and ReportLab.
+
 ---
 
-## 🚀 Quickstart & Setup Guide
+## ⚡ Quick Start
 
-### 1. Prerequisites
-
-Ensure Python 3.10+ and Ollama are installed on your Windows/Linux machine.
-
-### 2. Pull Local AI Models
-
-Run the following commands in your terminal to download the local Ollama models:
-
-```bash
-ollama pull nomic-embed-text
-ollama pull llama3.2
-```
-
-### 3. Install Python Dependencies
+### 1. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Launch DocuSense AI
+### 2. Download local AI models
+
+```bash
+ollama pull llama3.2
+ollama pull nomic-embed-text
+```
+
+### 3. Run the application
 
 ```bash
 streamlit run app.py
 ```
 
-Open your browser at **`http://localhost:8501`**.
+Open:
+
+```text
+http://localhost:8501
+```
 
 ---
 
-## 📊 Sample Datasets Included for Live Testing
+## 🔐 Privacy & Responsible AI
 
-1. **🌾 Sample Land Sale Agreement (Kinathukadavu Parcel)**: Rich property deed featuring Seller (*Palanisamy*), Buyer (*Muthusamy*), ₹45,00,000 consideration, Survey No. 123/2A, Patta number, and 8 legal clauses. Click **`⚡ Load Sample Land & Lease Policy`** in the sidebar.
-2. **⚡ Sample SaaS Terms of Service**: Enterprise digital user agreement featuring auto-renewal, unilateral modifications, and limitation of liability clauses.
+DocuSense AI aims to be built as a **local-first app**. Instead of using external AI APIs, documents are processed using local OCR, embeddings, FAISS and Ollama models.
+
+The safety score produced and forensic results are provided as AI-assisted indicators, not legal certification or legal advice.
 
 ---
 
-## 🤖 AI Tools Used During Prototyping
+## 👥 Team 2
 
-- **Local AI Models**: `llama3.2:latest` (text generation & simplification), `nomic-embed-text:latest` (vector embeddings).
-- **Development Assistant**: Antigravity AI Assistant for rapid UI prototyping and Streamlit optimization.
+| Member                      | Contribution                                |
+| --------------------------- | ------------------------------------------- |
+Full-Stack Architecture, RAG & Streamlit
+| **KAVIN M**                 | Team Lead, AI/LLM & Ollama Pipeline         |
+| **ANTO CHINNADURAI N A**    | Document Parser, Regex & EasyOCR            |
+DEEBA KUMAR M | Risk Evaluation & Multilingual Localization |
+| **KANISHA R**               | QA, PDF Export & Demo Dataset               |
+
+---
+
+## 🎯 Vision
+
+> Upload, Understand, Ask, Analyze, Identify Risks, Make an Informed Decision
+
+DocuSense AI is designed to simplify, clarify, and make important documents easily accessible and understandable for all.
+
+SRMIST 🏆 is a Built for Hack & Fest AI Innovation Hackathon.
